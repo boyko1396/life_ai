@@ -1,0 +1,38 @@
+.how-works {
+  padding: var(--gap-section-y) 0;
+  position: relative;
+  z-index: 0;
+  &__container {
+  }
+  &__title {
+    margin: 0 0 var(--title-gap);
+    @media (max-width: $sm) {
+    }
+  }
+  &__list {
+    display: flex;
+    gap: var(--gap-fluid);
+    counter-reset: howWorksCardCounter;
+    position: relative;
+    &-col {
+      flex: 1;
+      counter-increment: howWorksCardCounter;
+      @media (max-width: $md) {
+      }
+      &:last-child {
+        &:before {
+          background: $gradientAccent1;
+          height: 2rem;
+          content: '';
+          position: absolute;
+          top: 19rem;
+          right: calc(33.333% - 40rem + var(--gap-fluid));
+          left: 0;
+          z-index: -1;
+        }
+      }
+    }
+    &-card {
+    }
+  }
+}

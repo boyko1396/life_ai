@@ -1,0 +1,35 @@
+.reviews {
+  padding: var(--gap-section-y) 0;
+  &__container {
+  }
+  &__title {
+    margin: 0 0 var(--title-gap);
+    @media (max-width: $sm) {
+      font-size: var(--fs-2);
+    }
+  }
+  &__reviews-rating {
+    margin: 0 0 var(--gap-fluid);
+  }
+  &__list {
+    margin-bottom: var(--gap-fluid);
+    @media (max-width: $sm) {
+      margin: 0 var(--gap-);
+    }
+    &.swiper {
+    }
+    .swiper-wrapper {
+    }
+    .swiper-slide {
+      height: 100%;
+    }
+    &-card {
+      height: 100%;
+    }
+  }
+  &__slider-control {
+    margin: var(--gap-fluid) 0 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+}

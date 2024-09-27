@@ -1,0 +1,42 @@
+.examples {
+  padding: var(--gap-section-y) 0;
+  position: relative;
+  z-index: 0;
+  &__glare {
+    margin-left: 780rem;
+    top: 18%;
+    left: 50%;
+    transform: translateX(-50%) rotate(60deg) scaleY(-1);
+  }
+  &__container {
+  }
+  &__title {
+    margin: 0 0 var(--title-gap);
+    @media (max-width: $sm) {
+      font-size: var(--fs-2);
+    }
+  }
+  &__list {
+    margin-bottom: var(--gap-fluid-);
+    overflow: hidden;
+    &-col {
+      margin-bottom: var(--gap-fluid);
+      &:nth-child(odd) {
+      }
+      &:nth-child(even) {
+        .examples-card__inner {
+          flex-direction: column-reverse;
+        }
+        .examples-card__main {
+          margin-top: 0;
+          padding-top: 0;
+          margin-bottom: -1 * $radiusMd;
+          padding-bottom: $radiusMd;
+          border-radius: $radiusMd $radiusMd 0 0;
+        }
+      }
+    }
+    &-card {
+    }
+  }
+}

@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Life AI - Auth'
+  })
+  <body class="u-scrollbar">
+
+    <div id="root" class="site">
+      <div class="site__inner">
+        <!-- header BEGIN -->
+        @@include('html/components/header.html', {
+          'el': 'site__header'
+        })
+        <!-- header END -->
+        <main role="main" class="site__main">
+          <!-- intro BEGIN -->
+          <section class="intro">
+            <div class="container container--size-md intro__container">
+              <div class="intro__main">
+                <picture class="intro__bg">
+                  <!--<source
+                    srcset="images/intro-hero-bg-767.webp"
+                    type="image/webp"
+                    media="(max-width: 767px)">-->
+                  <source 
+                    srcset="images/intro-hero-bg-767.png"
+                    media="(max-width: 767px)">
+                  <!--<source
+                    srcset="images/intro-hero-bg.webp"
+                    type="image/webp">-->
+                  <img
+                    src="images/intro-hero-bg.png"
+                    alt="Life AI умный помощник"
+                    width="1200"
+                    height="472">
+                </picture>
+                <div class="intro__content">
+                  <h1 class="intro__title"><span class="visually-hidden">Life AI</span> Умный помощник</h1>
+                  <h2 class="u-content intro__subtitle">
+                    <p>ChatGPT на русском. Быстрая генерация текста, изображений и ответов на&nbsp;ваши&nbsp;вопросы</p>
+                  </h2>
+                  <button type="button" data-modal="popup-registration" class="btn btn--size-md btn--theme-black-accent-outline intro__btn">
+                    <span class="btn__inner">
+                      <span class="btn__title">Начать чат</span>
+                    </span>
+                  </button>
+                </div>
+                <div class="intro__info">
+                  <div class="row intro__info-row">
+                    <div class="row__col--4 intro__info-col">
+                      <article class="intro__info-card">
+                        <div class="info-header intro__info-card-header">
+                          <div class="info-header__inner">
+                            <div class="info-header__media">
+                              <picture class="info-header__icon">
+                                <img src="images/svg/info-header-1.svg" width="28" height="28" alt="Написание текстов">
+                              </picture>
+                            </div>
+                            <h3 class="fs-4 info-header__title">Написание текстов</h3>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="row__col--4 intro__info-col">
+                      <article class="intro__info-card">
+                        <div class="info-header intro__info-card-header">
+                          <div class="info-header__inner">
+                            <div class="info-header__media">
+                              <picture class="info-header__icon">
+                                <img src="images/svg/info-header-2.svg" width="28" height="28" alt="Генерация изображений">
+                              </picture>
+                            </div>
+                            <h3 class="fs-4 info-header__title">Генерация изображений</h3>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="row__col--4 intro__info-col">
+                      <article class="intro__info-card">
+                        <div class="info-header intro__info-card-header">
+                          <div class="info-header__inner">
+                            <div class="info-header__media">
+                              <picture class="info-header__icon">
+                                <img src="images/svg/info-header-3.svg" width="28" height="28" alt="Анализирование файлов">
+                              </picture>
+                            </div>
+                            <h3 class="fs-4 info-header__title">Анализирование файлов</h3>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- intro END -->
+          <!-- info BEGIN -->
+          <section id="info" class="info">
+            <div class="container container--size-md info__container">
+              <div class="row info__row">
+                <div class="row__col--7 info__col info__col--content">
+                  <div class="info__content">
+                    <h2 class="fs-2 info__content-title">Мы предлагаем вам лучшие условия использования нейросети</h2>
+                    <div class="u-content info__content-text">
+                      <p>Наша нейросеть предлагает мощные инструменты для генерации изображений, написания текстов, конспектирования документов и&nbsp;создания саммари видео.</p>
+                      <p>Эти функции объединяются в простой и интуитивно понятной платформе, которая позволяет легко решать разнообразные задачи.</p>
+                      <p>Благодаря нашему сервису, вы сможете быстро и эффективно справляться с любыми проектами, от создания уникального контента&nbsp;до анализа информации.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row__col--5 info__col info__col--list">
+                  <div class="info__list">
+                    <article class="info-card info__list-card">
+                      <div class="info-card__inner">
+                        <picture class="info-card__picture">
+                          <img src="images/svg/info-card-1.svg" alt="Генерация контента  онлайн">
+                        </picture>
+                        <div class="info-card__content">
+                          <h3 class="info-card__title">Генерация <span>контента</span> <br clear="d-sm-block">онлайн</h3>
+                          <div class="u-content info-card__text">
+                            <p>Вам не придётся скачивать и устанавливать неизвестные приложения и программы</p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="info-card info__list-card">
+                      <div class="info-card__inner">
+                        <picture class="info-card__picture">
+                          <img src="images/svg/info-card-2.svg" alt="Простота в использовании">
+                        </picture>
+                        <div class="info-card__content">
+                          <h3 class="info-card__title"><span>Простота</span> <br clear="d-sm-block">в&nbsp;использовании</h3>
+                          <div class="u-content info-card__text">
+                            <p>Разберётся любой человек, вне зависимости от возраста и образования</p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="info-card info__list-card">
+                      <div class="info-card__inner">
+                        <picture class="info-card__picture">
+                          <img src="images/svg/info-card-3.svg" alt="Широкий спектр возможностей">
+                        </picture>
+                        <div class="info-card__content">
+                          <h3 class="info-card__title">Широкий спектр <span>возможностей</span></h3>
+                          <div class="u-content info-card__text">
+                            <p>Наш чат справится с задачей любой  сложности и назначения, просто опишите её</p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- info END -->
+          <!-- about BEGIN -->
+          <section id="about" class="about">
+            <div class="container container--size-md about__container">
+              <h2 class="fs-2 about__title">Возможности LIFE&nbsp;AI</h2>
+              <div class="row about__list">
+                <div class="row__col--12 about__list-card">
+                  <div class="about-card">
+                    <div class="row about-card__row">
+                      <picture class="about-card__media">
+                        <!--<source
+                          srcset="images/about-card-1.webp"
+                          type="image/webp">-->
+                        <img
+                          src="images/about-card-1.jpg"
+                          alt="Тексты"
+                          width="1200"
+                          height="232">
+                      </picture>
+                      <div class="row__col--12 about-card__col about-card__col--content">
+                        <div class="about-card__content">
+                          <div class="about-card__info">
+                            <button type="button" data-modal="popup-registration" class="btn btn--size-xs btn--theme-black-accent-outline about-card__info-card">
+                              <span class="btn__inner">
+                                <span class="btn__title">Контент-план чат</span>
+                              </span>
+                            </button>
+                            <button type="button" data-modal="popup-registration" class="btn btn--size-xs btn--theme-black-accent-outline about-card__info-card">
+                              <span class="btn__inner">
+                                <span class="btn__title">Идеи</span>
+                              </span>
+                            </button>
+                            <button type="button" data-modal="popup-registration" class="btn btn--size-xs btn--theme-black-accent-outline about-card__info-card">
+                              <span class="btn__inner">
+                                <span class="btn__title">Рефераты</span>
+                              </span>
+                            </button>
+                            <button type="button" data-modal="popup-registration" class="btn btn--size-xs btn--theme-black-accent-outline about-card__info-card">
+                              <span class="btn__inner">
+                                <span class="btn__title">Сценарии</span>
+                              </span>
+                            </button>
+                            <button type="button" data-modal="popup-registration" class="btn btn--size-xs btn--theme-black-accent-outline about-card__info-card">
+                              <span class="btn__inner">
+                                <span class="btn__title">Слоганы</span>
+                              </span>
+                            </button>
+                            <button type="button" data-modal="popup-registration" class="btn btn--size-xs btn--theme-black-accent-outline about-card__info-card">
+                              <span class="btn__inner">
+                                <span class="btn__title">Скрипты</span>
+                              </span>
+                            </button>
+                          </div>
+                          <div class="about-card__header">
+                            <h3 class="about-card__header-title">Тексты</h3>
+                            <div class="u-content about-card__header-text">
+                              <p>Создавайте тексты любой сложности и тематики за&nbsp;считанные секунды. От статей и эссе до сценариев и писем</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row__col--12 about__list-card">
+                  <div class="about-card about__list-card">
+                    <div class="row about-card__row">
+                      <picture class="about-card__media">
+                        <!--<source
+                          srcset="images/about-card-2.webp"
+                          type="image/webp">-->
+                        <img
+                          src="images/about-card-2.jpg"
+                          alt="Изображения"
+                          width="1200"
+                          height="232">
+                      </picture>
+                      <div class="row__col--12 about-card__col about-card__col--content">
+                        <div class="about-card__content">
+                          <div class="about-card__info">
+                            <button type="button" data-modal="popup-registration" class="btn btn--size-xs btn--theme-black-accent-outline about-card__info-card">
+                              <span class="btn__inner">
+                                <span class="btn__title">Аватарки</span>
+                              </span>
+                            </button>
+                            <button type="button" data-modal="popup-registration" class="btn btn--size-xs btn--theme-black-accent-outline about-card__info-card">
+                              <span class="btn__inner">
+                                <span class="btn__title">Сайты</span>
+                              </span>
+                            </button>
+                            <button type="button" data-modal="popup-registration" class="btn btn--size-xs btn--theme-black-accent-outline about-card__info-card">
+                              <span class="btn__inner">
+                                <span class="btn__title">Презентации</span>
+                              </span>
+                            </button>
+                            <button type="button" data-modal="popup-registration" class="btn btn--size-xs btn--theme-black-accent-outline about-card__info-card">
+                              <span class="btn__inner">
+                                <span class="btn__title">Постеры</span>
+                              </span>
+                            </button>
+                            <button type="button" data-modal="popup-registration" class="btn btn--size-xs btn--theme-black-accent-outline about-card__info-card">
+                              <span class="btn__inner">
+                                <span class="btn__title">Логотипы</span>
+                              </span>
+                            </button>
+                            <button type="button" data-modal="popup-registration" class="btn btn--size-xs btn--theme-black-accent-outline about-card__info-card">
+                              <span class="btn__inner">
+                                <span class="btn__title">Соцсети</span>
+                              </span>
+                            </button>
+                          </div>
+                          <div class="about-card__header">
+                            <h3 class="about-card__header-title">Изображения</h3>
+                            <div class="u-content about-card__header-text">
+                              <p>Создавайте уникальные изображения по вашему описанию. Идеально&nbsp;для блогов, презентаций и соцсетей</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row__col--6 about__list-card">
+                  <div class="about-card about__list-card">
+                    <div class="row about-card__row">
+                      <picture class="about-card__media">
+                        <!--<source
+                          srcset="images/about-card-3.webp"
+                          type="image/webp">-->
+                        <img
+                          src="images/about-card-3.jpg"
+                          alt="Видео"
+                          width="588"
+                          height="272">
+                      </picture>
+                      <div class="row__col--12 about-card__col about-card__col--content">
+                        <div class="about-card__content">
+                          <div class="about-card__info">
+                            <button type="button" data-modal="popup-registration" class="btn btn--size-xs btn--theme-black-accent-outline about-card__info-card">
+                              <span class="btn__inner">
+                                <span class="btn__title">Лекции</span>
+                              </span>
+                            </button>
+                            <button type="button" data-modal="popup-registration" class="btn btn--size-xs btn--theme-black-accent-outline about-card__info-card">
+                              <span class="btn__inner">
+                                <span class="btn__title">Туториалы</span>
+                              </span>
+                            </button>
+                            <button type="button" data-modal="popup-registration" class="btn btn--size-xs btn--theme-black-accent-outline about-card__info-card">
+                              <span class="btn__inner">
+                                <span class="btn__title">Фильмы</span>
+                              </span>
+                            </button>
+                            <button type="button" data-modal="popup-registration" class="btn btn--size-xs btn--theme-black-accent-outline about-card__info-card">
+                              <span class="btn__inner">
+                                <span class="btn__title">Документалки</span>
+                              </span>
+                            </button>
+                            <button type="button" data-modal="popup-registration" class="btn btn--size-xs btn--theme-black-accent-outline about-card__info-card">
+                              <span class="btn__inner">
+                                <span class="btn__title">Влоги</span>
+                              </span>
+                            </button>
+                            <button type="button" data-modal="popup-registration" class="btn btn--size-xs btn--theme-black-accent-outline about-card__info-card">
+                              <span class="btn__inner">
+                                <span class="btn__title">Сериалы</span>
+                              </span>
+                            </button>
+                          </div>
+                          <div class="about-card__header">
+                            <h3 class="about-card__header-title">Видео</h3>
+                            <div class="u-content about-card__header-text">
+                              <p>Вставьте ссылку на видео, чтобы получить краткий пересказ  или задать вопросы по содержанию</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row__col--6 about__list-card">
+                  <div class="about-card about__list-card">
+                    <div class="row about-card__row">
+                      <picture class="about-card__media">
+                        <!--<source
+                          srcset="images/about-card-4.webp"
+                          type="image/webp">-->
+                        <img
+                          src="images/about-card-4.jpg"
+                          alt="Документы и ссылки"
+                          width="588"
+                          height="272">
+                      </picture>
+                      <div class="row__col--12 about-card__col about-card__col--content">
+                        <div class="about-card__content">
+                          <div class="about-card__info">
+                            <button type="button" data-modal="popup-registration" class="btn btn--size-xs btn--theme-black-accent-outline about-card__info-card">
+                              <span class="btn__inner">
+                                <span class="btn__title">Публикации</span>
+                              </span>
+                            </button>
+                            <button type="button" data-modal="popup-registration" class="btn btn--size-xs btn--theme-black-accent-outline about-card__info-card">
+                              <span class="btn__inner">
+                                <span class="btn__title">Брифы</span>
+                              </span>
+                            </button>
+                            <button type="button" data-modal="popup-registration" class="btn btn--size-xs btn--theme-black-accent-outline about-card__info-card">
+                              <span class="btn__inner">
+                                <span class="btn__title">Таблицы</span>
+                              </span>
+                            </button>
+                            <button type="button" data-modal="popup-registration" class="btn btn--size-xs btn--theme-black-accent-outline about-card__info-card">
+                              <span class="btn__inner">
+                                <span class="btn__title">Статьи</span>
+                              </span>
+                            </button>
+                            <button type="button" data-modal="popup-registration" class="btn btn--size-xs btn--theme-black-accent-outline about-card__info-card">
+                              <span class="btn__inner">
+                                <span class="btn__title">ТЗ</span>
+                              </span>
+                            </button>
+                            <button type="button" data-modal="popup-registration" class="btn btn--size-xs btn--theme-black-accent-outline about-card__info-card">
+                              <span class="btn__inner">
+                                <span class="btn__title">Отчеты</span>
+                              </span>
+                            </button>
+                          </div>
+                          <div class="about-card__header">
+                            <h3 class="about-card__header-title">Документы и ссылки</h3>
+                            <div class="u-content about-card__header-text">
+                              <p>Вставьте ссылку или загрузите документ, чтобы задать вопросы  по содержанию или получить краткую выжимку</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- about END -->
+          <!-- target-audience BEGIN -->
+          <section id="target-audience" class="target-audience">
+            <div class="container container--size-md target-audience__container">
+              <h2 class="visually-hidden fs-2 target-audience__title">Кому подходит</h2>
+              <div class="target-audience__list">
+                <div class="row target-audience__list-row">
+                  <div class="row__col--3 target-audience__list-col">
+                    <article class="target-audience-card target-audience__list-card">
+                      <div class="target-audience-card__inner">
+                        <div class="target-audience-card__media" style="background: #5D5CE6;"></div>
+                        <div class="target-audience-card__content">
+                          <h3 class="fs-2 target-audience-card__title">Кому подойдет</h3>
+                          <div class="u-content target-audience-card__text">
+                            <p>Наша нейросеть выполняет широкий спектр задач  и подойдет для задач из всех направлений</p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="row__col--3 target-audience__list-col">
+                    <article class="target-audience-card target-audience__list-card">
+                      <div class="target-audience-card__inner">
+                        <picture class="target-audience-card__picture">
+                          <!--<source
+                            srcset="images/target-audience-card-1.webp"
+                            type="image/webp">-->
+                          <img
+                            src="images/target-audience-card-1.jpg"
+                            alt="Маркетологи"
+                            width="282"
+                            height="340">
+                        </picture>
+                        <div class="target-audience-card__badge-list">
+                          <button type="button" data-modal="popup-registration" class="btn btn--size-xs btn--theme-grey-outline target-audience-card__badge">
+                            <span class="btn__inner">
+                              <span class="btn__title">Маркетологи</span>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="row__col--3 target-audience__list-col">
+                    <article class="target-audience-card target-audience__list-card">
+                      <div class="target-audience-card__inner">
+                        <picture class="target-audience-card__picture">
+                          <!--<source
+                            srcset="images/target-audience-card-2.webp"
+                            type="image/webp">-->
+                          <img
+                            src="images/target-audience-card-2.jpg"
+                            alt="Фрилансеры"
+                            width="282"
+                            height="340">
+                        </picture>
+                        <div class="target-audience-card__badge-list">
+                          <button type="button" data-modal="popup-registration" class="btn btn--size-xs btn--theme-grey-outline target-audience-card__badge">
+                            <span class="btn__inner">
+                              <span class="btn__title">Фрилансеры</span>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="row__col--3 target-audience__list-col">
+                    <article class="target-audience-card target-audience__list-card">
+                      <div class="target-audience-card__inner">
+                        <picture class="target-audience-card__picture">
+                          <!--<source
+                            srcset="images/target-audience-card-3.webp"
+                            type="image/webp">-->
+                          <img
+                            src="images/target-audience-card-3.jpg"
+                            alt="Студенты"
+                            width="282"
+                            height="340">
+                        </picture>
+                        <div class="target-audience-card__badge-list">
+                          <button type="button" data-modal="popup-registration" class="btn btn--size-xs btn--theme-grey-outline target-audience-card__badge">
+                            <span class="btn__inner">
+                              <span class="btn__title">Студенты</span>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="row__col--3 target-audience__list-col">
+                    <article class="target-audience-card target-audience__list-card">
+                      <div class="target-audience-card__inner">
+                        <picture class="target-audience-card__picture">
+                          <!--<source
+                            srcset="images/target-audience-card-4.webp"
+                            type="image/webp">-->
+                          <img
+                            src="images/target-audience-card-4.jpg"
+                            alt="Аналитики"
+                            width="282"
+                            height="340">
+                        </picture>
+                        <div class="target-audience-card__badge-list">
+                          <button type="button" data-modal="popup-registration" class="btn btn--size-xs btn--theme-grey-outline target-audience-card__badge">
+                            <span class="btn__inner">
+                              <span class="btn__title">Аналитики</span>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="row__col--3 target-audience__list-col">
+                    <article class="target-audience-card target-audience__list-card">
+                      <div class="target-audience-card__inner">
+                        <picture class="target-audience-card__picture">
+                          <!--<source
+                            srcset="images/target-audience-card-5.webp"
+                            type="image/webp">-->
+                          <img
+                            src="images/target-audience-card-5.jpg"
+                            alt="Блогеры"
+                            width="282"
+                            height="340">
+                        </picture>
+                        <div class="target-audience-card__badge-list">
+                          <button type="button" data-modal="popup-registration" class="btn btn--size-xs btn--theme-grey-outline target-audience-card__badge">
+                            <span class="btn__inner">
+                              <span class="btn__title">Блогеры</span>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="row__col--3 target-audience__list-col">
+                    <article class="target-audience-card target-audience__list-card">
+                      <div class="target-audience-card__inner">
+                        <picture class="target-audience-card__picture">
+                          <!--<source
+                            srcset="images/target-audience-card-6.webp"
+                            type="image/webp">-->
+                          <img
+                            src="images/target-audience-card-6.jpg"
+                            alt="Копирайтеры"
+                            width="282"
+                            height="340">
+                        </picture>
+                        <div class="target-audience-card__badge-list">
+                          <button type="button" data-modal="popup-registration" class="btn btn--size-xs btn--theme-grey-outline target-audience-card__badge">
+                            <span class="btn__inner">
+                              <span class="btn__title">Копирайтеры</span>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="row__col--3 target-audience__list-col">
+                    <article class="target-audience-card target-audience__list-card">
+                      <div class="target-audience-card__inner">
+                        <div class="target-audience-card__media" style="background: #D72BEA;"></div>
+                        <div class="target-audience-card__content">
+                          <h3 class="fs-3 target-audience-card__title">Попробуйте сейчас</h3>
+                          <button type="button" data-modal="popup-registration" class="btn btn--size-md btn--theme-black-accent-outline target-audience-card__btn">
+                            <span class="btn__inner">
+                              <span class="btn__title">Начать чат</span>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- target-audience END -->
+          <!-- benefits BEGIN -->
+          <section id="benefits" class="benefits">
+            <div class="container container--size-md benefits__container">
+              <h2 class="fs-2 benefits__title"><span class="text-gradient text-gradient--theme-accent-gradient">Улучшения</span>, которые принесет нейросеть</h2>
+              <div class="benefits__list">
+                <div class="row benefits__list-row">
+                  <div class="row__col--4 benefits__list-col">
+                    <article class="benefits-card benefits__list-card">
+                      <div class="benefits-card__inner">
+                        <div class="benefits-card__content">
+                          <h3 class="benefits-card__title">Экономия <br>времени на&nbsp;25%</h3>
+                        <div class="benefits-card__media">
+                          <img src="images/benefits-card-1.svg" width="152" height="152" alt="25%">
+                          <p class="title fs-4 benefits-card__svg-progress">25%</p>
+                        </div>
+                          <div class="u-content benefits-card__text">
+                            <p>Автоматизация задач освободит значительное количество вашего времени</p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="row__col--4 benefits__list-col">
+                    <article class="benefits-card benefits__list-card">
+                      <div class="benefits-card__inner">
+                        <div class="benefits-card__content">
+                          <h3 class="benefits-card__title">Повышение<br>качества на&nbsp;30%</h3>
+                          <div class="benefits-card__media">
+                            <img src="images/benefits-card-1.svg" width="152" height="152" alt="30%">
+                            <p class="title fs-4 benefits-card__svg-progress">30%</p>
+                          </div>
+                          <div class="u-content benefits-card__text">
+                            <p>Автоматизация задач освободит значительное количество вашего времени</p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="row__col--4 benefits__list-col">
+                    <article class="benefits-card benefits__list-card">
+                      <div class="benefits-card__inner">
+                        <div class="benefits-card__content">
+                          <h3 class="benefits-card__title">Увеличение <br>продуктивности на&nbsp;50%</h3>
+                          <div class="benefits-card__media">
+                            <img src="images/benefits-card-1.svg" width="152" height="152" alt="50%">
+                            <p class="title fs-4 benefits-card__svg-progress">50%</p>
+                          </div>
+                          <div class="u-content benefits-card__text">
+                            <p>Автоматизация задач освободит значительное количество вашего времени</p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- benefits END -->
+          <!-- features BEGIN -->
+          <section class="features">
+            <div class="container container--size-md features__container">
+              <h2 class="visually-hidden fs-2 features__title">Особенности<br class="d-sm-block">Life&nbsp;AI</h2>
+              <div class="features__list">
+                <div class="row features__list-row">
+                  <div class="row__col--4 features__list-col">
+                    <article class="features-card features__list-card">
+                      <h3 class="fs-2 features-card__suptitle">Особенности Life AI</h3>
+                      <div class="features-card__content">
+                        <div class="u-content features-card__text">
+                          <p>LIFE&nbsp;AI позволяет создавать разнообразный контент, включая тексты и изображения. Это универсальный инструмент для креативных специалистов, способный вдохновлять и&nbsp;воплощать в жизнь самые  смелые идеи.</p>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="row__col--4 features__list-col">
+                    <article class="features-card features__list-card">
+                      <div class="features-card__inner">
+                        <div class="features-card__media">
+                          <picture class="features-card__icon">
+                            <img src="images/svg/features-card-1.svg" alt="Многофункциональная генерация контента">
+                          </picture>
+                        </div>
+                        <h3 class="fs-3 features-card__title">Многофункциональная генерация контента</h3>
+                        <div class="features-card__content">
+                          <div class="u-content features-card__text">
+                            <p>LIFE&nbsp;AI позволяет создавать разнообразный контент, включая тексты и изображения. Это универсальный инструмент для креативных специалистов, способный вдохновлять и&nbsp;воплощать в жизнь самые смелые&nbsp;идеи.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="row__col--4 features__list-col">
+                    <article class="features-card features__list-card">
+                      <div class="features-card__inner">
+                        <div class="features-card__media">
+                          <picture class="features-card__icon">
+                            <img src="images/svg/features-card-2.svg" alt="Глубокий анализ видео и визуального контента">
+                          </picture>
+                        </div>
+                        <h3 class="fs-3 features-card__title">Глубокий анализ видео и&nbsp;визуального контента</h3>
+                        <div class="features-card__content">
+                          <div class="u-content features-card__text">
+                            <p>Нейросеть проводит детальный анализ видео и визуального контента, выявляя ключевые моменты и тренды. Это&nbsp;помогает SMM-менеджерам и&nbsp;маркетологам создавать контент, который максимально отвечает потребностям аудитории.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="row__col--4 features__list-col">
+                    <article class="features-card features-card--theme-accent-gradient features__list-card">
+                      <div class="features-card__inner">
+                        <div class="features-card__media">
+                          <picture class="features-card__icon">
+                            <img src="images/svg/features-card-3.svg" alt="Попробуйте сейчас">
+                          </picture>
+                        </div>
+                        <h3 class="fs-3 features-card__title">Попробуйте сейчас</h3>
+                        <div class="features-card__footer">
+                          <button type="button" data-modal="popup-registration" class="btn btn--size-md btn--theme-black-accent-outline features-card__footer-btn">
+                            <span class="btn__inner">
+                              <span class="btn__title">Начать чат</span>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="row__col--4 features__list-col">
+                    <article class="features-card features__list-card">
+                      <div class="features-card__inner">
+                        <div class="features-card__media">
+                          <picture class="features-card__icon">
+                            <img src="images/svg/features-card-4.svg" alt="Аналитика веб-сайтов и документов">
+                          </picture>
+                        </div>
+                        <h3 class="fs-3 features-card__title">Аналитика веб-сайтов и&nbsp;nbsp;документов</h3>
+                        <div class="features-card__content">
+                          <div class="u-content features-card__text">
+                            <p>LIFE AI эффективно анализирует веб-сайты и документы, извлекая важные данные и выявляя ключевые инсайты. Это позволяет легко адаптировать стратегию под актуальные тенденции и&nbsp;требования рынка.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="row__col--4 features__list-col">
+                    <article class="features-card features__list-card">
+                      <div class="features-card__inner">
+                        <div class="features-card__media">
+                          <picture class="features-card__icon">
+                            <img src="images/svg/features-card-5.svg" alt="Персонализированные рекомендации">
+                          </picture>
+                        </div>
+                        <h3 class="fs-3 features-card__title">Персонализированные рекомендации</h3>
+                        <div class="features-card__content">
+                          <div class="u-content features-card__text">
+                            <p>LIFE AI предлагает индивидуальные советы по созданию и оптимизации контента на основе анализа аудитории и&nbsp;конкурентного окружения. Подбирая лучшие практики, она помогает увеличить вовлеченность и повысить эффективность кампаний.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- features END -->
+          <!-- how-works BEGIN -->
+          <section class="how-works">
+            <div class="container container--size-md how-works__container">
+              <h2 class="fs-2 how-works__title">Как это работает</h2>
+              <div class="how-works__list">
+                <div class="how-works__list-col">
+                  <article class="how-works-card how-works__list-card">
+                    <div class="how-works-card__inner">
+                      <div class="how-works-card__counter"></div>
+                      <div class="how-works-card__content">
+                        <h3 class="how-works-card__title">Зарегистрируйтесь и&nbsp;настройте профиль</h3>
+                        <div class="u-content how-works-card__text">
+                          <p>Вам не придётся скачивать и устанавливать неизвестные приложения и программы</p>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="how-works__list-col">
+                  <article class="how-works-card how-works__list-card">
+                    <div class="how-works-card__inner">
+                      <div class="how-works-card__counter"></div>
+                      <div class="how-works-card__content">
+                        <h3 class="how-works-card__title">Загрузите ваши данные или&nbsp;вставьте ссылки</h3>
+                        <div class="u-content how-works-card__text">
+                          <p>Разберётся любой человек,  вне зависимости от возраста и образования</p>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="how-works__list-col">
+                  <article class="how-works-card how-works__list-card">
+                    <div class="how-works-card__inner">
+                      <div class="how-works-card__counter"></div>
+                      <div class="how-works-card__content">
+                        <h3 class="how-works-card__title">Получите результаты и&nbsp;рекомендации</h3>
+                        <div class="u-content how-works-card__text">
+                          <p>Наш чат справится с задачей любой сложности и назначения, просто опишите её</p>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- how-works END -->
+          <!-- examples BEGIN -->
+          <section class="examples">
+            <div class="container container--size-md examples__container">
+              <h2 class="fs-2 examples__title">Примеры использования</h2>
+              <div class="row examples__list">
+                <div class="row__col--4 examples__list-col">
+                  <article class="examples-card examples__list-card">
+                    <div class="examples-card__inner">
+                      <div class="examples-card__media">
+                        <picture class="examples-card__picture">
+                          <!--<source
+                            srcset="images/examples-card-1-767.webp"
+                            type="image/webp"
+                            media="(max-width: 767px)">-->
+                          <source 
+                            srcset="images/examples-card-1-767.jpg"
+                            media="(max-width: 767px)">
+                          <!--<source
+                            srcset="images/examples-card-1.webp"
+                            type="image/webp">-->
+                          <img
+                            src="images/examples-card-1.jpg"
+                            alt="Составь текст для рекламы по данному ТЗ"
+                            width="340"
+                            height="180">
+                        </picture>
+                        <button type="button" data-modal="popup-registration" class="btn btn--size-xs btn--theme-grey-outline examples-card__appeal">
+                          <span class="btn__inner">
+                            <span class="btn__title">Составь текст для рекламы<br>по&nbsp;данному ТЗ</span>
+                          </span>
+                        </button>
+                      </div>
+                      <div class="examples-card__main">
+                        <div class="examples-card__content">
+                          <h3 class="examples-card__title">Загрузите файл</h3>
+                          <div class="u-content examples-card__text">
+                            <p>Вы можете загрузить любой файл и&nbsp;задать чату вопрос, связанный с ним</p>
+                          </div>
+                          <footer class="examples-card__footer">
+                            <button type="button" data-modal="popup-registration" class="examples-card__footer-btn">Загрузить файл ></button>
+                          </footer>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="row__col--4 examples__list-col">
+                  <article class="examples-card examples__list-card">
+                    <div class="examples-card__inner">
+                      <div class="examples-card__media">
+                        <picture class="examples-card__picture">
+                          <!--<source
+                            srcset="images/examples-card-2-767.webp"
+                            type="image/webp"
+                            media="(max-width: 767px)">-->
+                          <source 
+                            srcset="images/examples-card-2-767.jpg"
+                            media="(max-width: 767px)">
+                          <!--<source
+                            srcset="images/examples-card-2.webp"
+                            type="image/webp">-->
+                          <img
+                            src="images/examples-card-2.jpg"
+                            alt="Какую страну показывают в этом видео?"
+                            width="340"
+                            height="180">
+                        </picture>
+                        <button type="button" data-modal="popup-registration" class="btn btn--size-xs btn--theme-grey-outline examples-card__appeal">
+                          <span class="btn__inner">
+                            <span class="btn__title">Какую страну показывают в&nbsp;этом видео?</span>
+                          </span>
+                        </button>
+                      </div>
+                      <div class="examples-card__main">
+                        <div class="examples-card__content">
+                          <h3 class="examples-card__title">Видео Youtube</h3>
+                          <div class="u-content examples-card__text">
+                            <p>Дайте ссылку на видео <br> и&nbsp;задайте ваш вопрос</p>
+                          </div>
+                          <footer class="examples-card__footer">
+                            <button type="button" data-modal="popup-registration" class="examples-card__footer-btn">Спросить ></button>
+                          </footer>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="row__col--4 examples__list-col">
+                  <article class="examples-card examples__list-card">
+                    <div class="examples-card__inner">
+                      <div class="examples-card__media">
+                        <picture class="examples-card__picture">
+                          <!--<source
+                            srcset="images/examples-card-3-767.webp"
+                            type="image/webp"
+                            media="(max-width: 767px)">-->
+                          <source 
+                            srcset="images/examples-card-3-767.jpg"
+                            media="(max-width: 767px)">
+                          <!--<source
+                            srcset="images/examples-card-3.webp"
+                            type="image/webp">-->
+                          <img
+                            src="images/examples-card-3.jpg"
+                            alt="Сделай краткое описание статьи на сайте"
+                            width="340"
+                            height="180">
+                        </picture>
+                        <button type="button" data-modal="popup-registration" class="btn btn--size-xs btn--theme-grey-outline examples-card__appeal">
+                          <span class="btn__inner">
+                            <span class="btn__title">Сделай краткое описание статьи на сайте</span>
+                          </span>
+                        </button>
+                      </div>
+                      <div class="examples-card__main">
+                        <div class="examples-card__content">
+                          <h3 class="examples-card__title">Вставьте ссылку</h3>
+                          <div class="u-content examples-card__text">
+                            <p>Вы можете дать ИИ ссылку и задать любой вопрос по содержанию страницы</p>
+                          </div>
+                          <footer class="examples-card__footer">
+                            <button type="button" data-modal="popup-registration" class="examples-card__footer-btn">Вставить ссылку ></button>
+                          </footer>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- examples END -->
+          <!-- reviews BEGIN -->
+          <section id="reviews" class="reviews">
+            <div class="container container--size-md reviews__container">
+              <h2 class="fs-2 reviews__title">Отзывы</h2>
+              <div class="reviews-rating reviews-rating--theme-accent reviews__reviews-rating">
+                <div class="reviews-rating__inner">
+                  <p class="title reviews-rating__estimation">4.9</p>
+                  <div class="u-rating u-rating--theme-white reviews-rating__rating" style="--rating-progress: 4.9"></div>
+                  <p class="reviews-rating__description">Средняя оценка тысяч пользователей</p>
+                  <div class="reviews-rating__logo-list">
+                    <picture class="reviews-rating__logo">
+                      <img src="images/svg/app-store-logo.svg" width="144" height="38" alt="Life AI">
+                    </picture>
+                    <picture class="reviews-rating__logo">
+                      <img src="images/svg/google-play-logo.svg" width="144" height="38" alt="Life AI">
+                    </picture>
+                  </div>
+                </div>
+              </div>
+              <div class="js-reviews-slider-init swiper reviews__list">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="reviews-card reviews__list-card">
+                      <div class="reviews-card__inner">
+                        <header class="reviews-card__header">
+                          <div class="reviews-card__user">
+                            <p class="title fs-4 reviews-card__name">Елена</p>
+                            <p class="reviews-card__position">Маркетолог</p>
+                          </div>
+                          <div class="reviews-card__info">
+                            <div class="u-rating reviews-card__rating" style="--rating-progress: 5"></div>
+                            <time class="reviews-card__date">02 июля</time>
+                          </div>
+                        </header>
+                        <div class="reviews-card__content">
+                          <div class="u-content reviews-card__text">
+                            <p>Нейросеть стала незаменимым помощником в создании контента для наших кампаний. Она генерирует тексты, которые точно отвечают нашим требованиям и вдохновляют на новые идеи. Удобно, что нет необходимости в VPN.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="reviews-card reviews__list-card">
+                      <div class="reviews-card__inner">
+                        <header class="reviews-card__header">
+                          <div class="reviews-card__user">
+                            <p class="title fs-4 reviews-card__name">Александр</p>
+                            <p class="reviews-card__position">SEO-специалист</p>
+                          </div>
+                          <div class="reviews-card__info">
+                            <div class="u-rating reviews-card__rating" style="--rating-progress: 5"></div>
+                            <time class="reviews-card__date">29 июня</time>
+                          </div>
+                        </header>
+                        <div class="reviews-card__content">
+                          <div class="u-content reviews-card__text">
+                            <p>Используя нейросеть для оптимизации контента, я значительно увеличил трафик на сайте. Этот инструмент не только экономит время, но и обеспечивает высокое качество результатов. </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="reviews-card reviews__list-card">
+                      <div class="reviews-card__inner">
+                        <header class="reviews-card__header">
+                          <div class="reviews-card__user">
+                            <p class="title fs-4 reviews-card__name">Ольга</p>
+                            <p class="reviews-card__position">Студентка</p>
+                          </div>
+                          <div class="reviews-card__info">
+                            <div class="u-rating reviews-card__rating" style="--rating-progress: 5"></div>
+                            <time class="reviews-card__date">15 мая</time>
+                          </div>
+                        </header>
+                        <div class="reviews-card__content">
+                          <div class="u-content reviews-card__text">
+                            <p>Моя продуктивность после использования LIFE&nbsp;AI выросла невероятно. Я стала намного эффективнее с помощью ИИ. </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="reviews-card reviews__list-card">
+                      <div class="reviews-card__inner">
+                        <header class="reviews-card__header">
+                          <div class="reviews-card__user">
+                            <p class="title fs-4 reviews-card__name">Иван</p>
+                            <p class="reviews-card__position">Копирайтер</p>
+                          </div>
+                          <div class="reviews-card__info">
+                            <div class="u-rating reviews-card__rating" style="--rating-progress: 5"></div>
+                            <time class="reviews-card__date">01 мая</time>
+                          </div>
+                        </header>
+                        <div class="reviews-card__content">
+                          <div class="u-content reviews-card__text">
+                            <p>Как копирайтер, я ценю возможность быстро генерировать качественный контент с помощью нейросети. Этот инструмент помогает мне сохранять вдохновение и продуктивность.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="reviews-card reviews__list-card">
+                      <div class="reviews-card__inner">
+                        <header class="reviews-card__header">
+                          <div class="reviews-card__user">
+                            <p class="title fs-4 reviews-card__name">Наталья</p>
+                            <p class="reviews-card__position">Предприниматель</p>
+                          </div>
+                          <div class="reviews-card__info">
+                            <div class="u-rating reviews-card__rating" style="--rating-progress: 5"></div>
+                            <time class="reviews-card__date">09 февраля</time>
+                          </div>
+                        </header>
+                        <div class="reviews-card__content">
+                          <div class="u-content reviews-card__text">
+                            <p>Нейросеть помогает мне разрабатывать стратегии для моего бизнеса, а также анализировать рынок. Это мощный инструмент для&nbsp;любого, кто стремится к успеху в бизнесе.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slider-control reviews__slider-control">
+                <div class="slider-control__inner">
+                  <button type="button" class="js-swiper-button-prev-1 swiper-button swiper-button-prev swiper-button--theme-accent swiper-button--size-sm slider-control__btn">
+                    prev
+                    <svg class="u-icon">
+                      <use xlink:href="images/icons/icons.svg#arrow-type-2"></use>
+                    </svg>
+                  </button>
+                  <button type="button" class="js-swiper-button-next-1 swiper-button swiper-button-next swiper-button--theme-accent swiper-button--size-sm slider-control__btn">
+                    next
+                    <svg class="u-icon">
+                      <use xlink:href="images/icons/icons.svg#arrow-type-2"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- reviews END -->
+          <!-- faq BEGIN -->
+          <section id="faq" class="faq">
+            <div class="container container--size-md faq__container">
+              <h2 class="fs-2 faq__title">Вы часто спрашиваете&nbsp;нас</h2>
+              <div itemscope itemtype="https://schema.org/FAQPage" class="faq__list">
+                <article class="faq-card faq-card--theme-grey faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <div class="faq-card__header">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
+                      <h3 itemprop="name" class="fs-4 faq-card__title">Что такое Нейросеть и&nbsp;как&nbsp;она&nbsp;работает?</h3>
+                    </button>
+                    <div class="faq-card__icon">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#plus"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
+                    <div class="faq-card__inner">
+                      <div class="u-content faq-card__text">
+                        <p>Нейросеть – это мощный инструмент на базе искусственного интеллекта, который помогает вам создавать тексты, изображения и преобразовывать аудио в текст. Она обучена на огромном количестве данных и способна генерировать высококачественные результаты за считанные секунды.</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="faq-card faq-card--theme-grey faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <div class="faq-card__header">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
+                      <h3 itemprop="name" class="fs-4 faq-card__title">Нужно ли использовать VPN для доступа к&nbsp;Нейросети?</h3>
+                    </button>
+                    <div class="faq-card__icon">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#plus"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
+                    <div class="faq-card__inner">
+                      <div class="u-content faq-card__text">
+                        <p>Нет, для использования Нейросети не требуется VPN. Вы можете свободно пользоваться всеми её возможностями без каких-либо ограничений.</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="faq-card faq-card--theme-grey faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <div class="faq-card__header">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
+                      <h3 itemprop="name" class="fs-4 faq-card__title">Можно ли оплатить услуги Нейросети картой РФ?</h3>
+                    </button>
+                    <div class="faq-card__icon">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#plus"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
+                    <div class="faq-card__inner">
+                      <div class="u-content faq-card__text">
+                        <p>Да, вы можете оплатить наши услуги картой РФ. Мы поддерживаем различные способы оплаты, чтобы сделать процесс как можно более удобным для наших пользователей.</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="faq-card faq-card--theme-grey faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <div class="faq-card__header">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
+                      <h3 itemprop="name" class="fs-4 faq-card__title">Какую информацию может генерировать Нейросеть?</h3>
+                    </button>
+                    <div class="faq-card__icon">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#plus"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
+                    <div class="faq-card__inner">
+                      <div class="u-content faq-card__text">
+                        <p>Нейросеть может генерировать тексты различного типа, создавать изображения по вашему запросу и преобразовывать аудио в текст. Это идеальный инструмент для маркетологов, студентов, копирайтеров, предпринимателей и многих других.</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="faq-card faq-card--theme-grey faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <div class="faq-card__header">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
+                      <h3 itemprop="name" class="fs-4 faq-card__title">Как быстро Нейросеть обрабатывает запросы?</h3>
+                    </button>
+                    <div class="faq-card__icon">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#plus"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
+                    <div class="faq-card__inner">
+                      <div class="u-content faq-card__text">
+                        <p>Нейросеть работает с высокой скоростью и способна генерировать результаты за считанные секунды. Это позволяет вам быстро получать нужные данные и использовать их в своей работе.</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="faq-card faq-card--theme-grey faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <div class="faq-card__header">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
+                      <h3 itemprop="name" class="fs-4 faq-card__title">Какие данные требуется предоставить для начала использования?</h3>
+                    </button>
+                    <div class="faq-card__icon">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#plus"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
+                    <div class="faq-card__inner">
+                      <div class="u-content faq-card__text">
+                        <p>Для начала использования вам нужно зарегистрироваться, предоставив адрес электронной почты и создав пароль. После регистрации вы получите доступ ко всем функциям Нейросети.</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="faq-card faq-card--theme-grey faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <div class="faq-card__header">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
+                      <h3 itemprop="name" class="fs-4 faq-card__title">Есть ли ограничения на использование Нейросети?</h3>
+                    </button>
+                    <div class="faq-card__icon">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#plus"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
+                    <div class="faq-card__inner">
+                      <div class="u-content faq-card__text">
+                        <p>Нет, наша Нейросеть предоставляет безлимитный доступ к своим функциям. Вы можете использовать её столько, сколько вам нужно, без&nbsp;ограничений по времени или количеству запросов.</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="faq-card faq-card--theme-grey faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <div class="faq-card__header">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
+                      <h3 itemprop="name" class="fs-4 faq-card__title">Какую пользу я могу получить от использования Нейросети?</h3>
+                    </button>
+                    <div class="faq-card__icon">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#plus"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
+                    <div class="faq-card__inner">
+                      <div class="u-content faq-card__text">
+                        <p>Нейросеть помогает экономить время, улучшать качество контента, автоматизировать рутинные задачи и получать ценные инсайты из данных. Это идеальный инструмент для повышения эффективности работы в различных областях.</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="faq-card faq-card--theme-grey faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <div class="faq-card__header">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
+                      <h3 itemprop="name" class="fs-4 faq-card__title">С чем работает нейросеть LIFE&nbsp;AI?</h3>
+                    </button>
+                    <div class="faq-card__icon">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#plus"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
+                    <div class="faq-card__inner">
+                      <div class="u-content faq-card__text">
+                        <p>Нейросеть Leonard AI обладает широкими возможностями и работает с различными типами контента. Вы можете вставить ссылку на видео с YouTube и получить краткий пересказ или задать вопросы по содержанию. Она также справляется с документами: вставляйте ссылки на веб-страницы или загружайте файлы (PDF, DOCX и другие форматы) для получения ответов на вопросы или краткой выжимки. Нейросеть может генерировать изображения по описанию и анализировать загруженные изображения. Кроме того, LIFE&nbsp;AI поддерживает работу с текстовыми данными: генерирует тексты по заданной теме и помогает создавать резюме, письма, статьи и другие документы. Наша нейросеть постоянно развивается, добавляя новые функции и улучшая существующие, чтобы максимально удовлетворить потребности наших пользователей.</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+          <!-- faq END -->
+        </main>
+        <!-- footer BEGIN -->
+        @@include('html/components/footer.html', {
+          'el': 'site__footer'
+        })
+        <!-- footer END -->
+      </div>
+      @@include('html/modal.html')
+    </div>
+
+    @@include('html/script.html')
+  </body>
+</html>
